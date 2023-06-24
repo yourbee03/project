@@ -155,7 +155,7 @@ public class Daftar extends javax.swing.JFrame {
         }else{
             try{
                 Connection c = koneksi.getKoneksi();
-                String sql = "INSERT INTO user VALUES (?, ?)";
+                String sql = "INSERT INTO user (username,password) VALUES (?, ?)";
                 PreparedStatement p = c.prepareStatement(sql);
                 p.setString(1, username);
                 p.setString(2, password);

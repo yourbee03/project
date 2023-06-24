@@ -35,30 +35,21 @@ public class inputpaslon extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         txt_nimk = new javax.swing.JTextField();
-        txt_nimw = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         txt_namak = new javax.swing.JTextField();
-        txt_namaw = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         txt_jurusank = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        txt_jurusanw = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         txt_visi = new javax.swing.JTextField();
         txt_misi = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -67,72 +58,37 @@ public class inputpaslon extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("ketua");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("wakil ketua");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 30, 40, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("NIM");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, 20));
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("NIM");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, -1, 20));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 60, 20, 20));
 
         txt_nimk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_nimkActionPerformed(evt);
             }
         });
-        getContentPane().add(txt_nimk, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 130, 20));
-
-        txt_nimw.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_nimwActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txt_nimw, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 140, 20));
+        getContentPane().add(txt_nimk, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 130, 30));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Nama");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 30, 20));
-        getContentPane().add(txt_namak, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 130, 20));
-        getContentPane().add(txt_namaw, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 140, -1));
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Nama");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, 20));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 30, 20));
+        getContentPane().add(txt_namak, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 130, 30));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Jurusan");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, 20));
-        getContentPane().add(txt_jurusank, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 130, 20));
-
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Jurusan");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, -1, 20));
-        getContentPane().add(txt_jurusanw, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 140, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 60, 20));
+        getContentPane().add(txt_jurusank, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 130, 30));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Foto");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, 20));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 130, 20));
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Foto");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, -1, 20));
-        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 140, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 40, 20));
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 130, 30));
 
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("visi");
@@ -140,9 +96,9 @@ public class inputpaslon extends javax.swing.JFrame {
 
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("misi");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 206, 30, 10));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 30, 20));
         getContentPane().add(txt_visi, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 100, 40));
-        getContentPane().add(txt_misi, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 110, 40));
+        getContentPane().add(txt_misi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, 110, 40));
 
         jButton1.setBackground(new java.awt.Color(255, 0, 51));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -155,18 +111,22 @@ public class inputpaslon extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 90, 20));
 
+        jButton2.setBackground(new java.awt.Color(51, 51, 255));
+        jButton2.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Kembali");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, 20));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/dashboard edit.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, -1));
 
-        jLabel15.setText("jLabel15");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 420));
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txt_nimwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nimwActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_nimwActionPerformed
 
     private void txt_nimkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nimkActionPerformed
         // TODO add your handling code here:
@@ -175,20 +135,20 @@ public class inputpaslon extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String nim = txt_nimk.getText().toString().trim();
         String nama_mhs = txt_namak.getText().toString().trim();
-        String jurusan = txt_jurusank.getText().toString().trim();
+        String nama_jurusan = txt_jurusank.getText().toString().trim();
         String visi = txt_visi.getText().toString().trim();
         String misi = txt_misi.getText().toString().trim();
         
-        if (nim.isEmpty() || nama_mhs.isEmpty() || jurusan.isEmpty() || visi.isEmpty() || misi.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Data Tidak Boleh Kosong", "Error" JOptionPane.ERROR_MESSAGE);
+        if (nim.isEmpty() || nama_mhs.isEmpty() || nama_jurusan.isEmpty() || visi.isEmpty() || misi.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Data Tidak Boleh Kosong");
         }else{
             try{
                 Connection c = koneksi.getKoneksi();
-                String sql = "INSERT INTO kandidat VALUES (?, ?, ?, ?, ?)";
+                String sql = "INSERT INTO kandidat(nim,nama_mhs,nama_jurusan,visi,misi) VALUES (?, ?, ?, ?, ?)";
                 PreparedStatement p = c.prepareStatement(sql);
                 p.setString(1, nim);
                 p.setString(2, nama_mhs);
-                p.setString(3, jurusan);
+                p.setString(3, nama_jurusan);
                 p.setString(4, visi);
                 p.setString(5, misi);
                 p.executeUpdate();
@@ -203,6 +163,12 @@ public class inputpaslon extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose(); //close the form
+                Home h = new Home();
+                h.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,30 +208,21 @@ public class inputpaslon extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField txt_jurusank;
-    private javax.swing.JTextField txt_jurusanw;
     private javax.swing.JTextField txt_misi;
     private javax.swing.JTextField txt_namak;
-    private javax.swing.JTextField txt_namaw;
     private javax.swing.JTextField txt_nimk;
-    private javax.swing.JTextField txt_nimw;
     private javax.swing.JTextField txt_visi;
     // End of variables declaration//GEN-END:variables
 }

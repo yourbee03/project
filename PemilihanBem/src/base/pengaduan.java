@@ -4,6 +4,13 @@
  */
 package base;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -27,11 +34,12 @@ public class pengaduan extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txt_pengaduan = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -41,12 +49,12 @@ public class pengaduan extends javax.swing.JFrame {
         jLabel2.setText("pengaduan");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, -1, -1));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txt_pengaduan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txt_pengaduanActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 230, 110));
+        getContentPane().add(txt_pengaduan, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 230, 110));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("tulis pengaduan");
@@ -55,19 +63,64 @@ public class pengaduan extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 0, 51));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("kirim");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, -1, -1));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, -1));
+
+        jButton2.setBackground(new java.awt.Color(51, 51, 255));
+        jButton2.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Kembali");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, 20));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/dashboard edit.png"))); // NOI18N
         jLabel4.setText("jLabel4");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 310));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 420, 340));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void txt_pengaduanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_pengaduanActionPerformed
+        
+    }//GEN-LAST:event_txt_pengaduanActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose(); //close the form
+        Home h = new Home();
+        h.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       String pengaduan = txt_pengaduan.getText().toString().trim();
+        if (pengaduan.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Data Tidak valid");
+        }else{
+            try{
+                Connection c = koneksi.getKoneksi();
+                String sql = "INSERT INTO pengaduan VALUES (?)";
+                PreparedStatement p = c.prepareStatement(sql);
+                p.setString(1, pengaduan);
+                p.executeUpdate();
+                p.close();
+                JOptionPane.showMessageDialog(null, "Pengaduan Berhasil di simpan");
+            }catch(SQLException e){
+                System.out.println("Error");
+            }finally{
+                this.dispose();
+                Home h = new Home();
+                h.setVisible(true);
+            }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -106,10 +159,11 @@ public class pengaduan extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txt_pengaduan;
     // End of variables declaration//GEN-END:variables
 }

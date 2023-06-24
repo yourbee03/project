@@ -42,6 +42,7 @@ public class voting extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
 
@@ -113,25 +114,34 @@ public class voting extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 0, 51));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
-
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\AMELIA\\KULIAH\\Kuliah SMT 4\\PROJECT DESKTOP\\foto figma\\Frame 37 edit 2.png")); // NOI18N
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\AMELIA\\KULIAH\\Kuliah SMT 4\\PROJECT DESKTOP\\foto figma\\Frame 37 edit 2.png")); // NOI18N
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
-
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\AMELIA\\KULIAH\\Kuliah SMT 4\\PROJECT DESKTOP\\foto figma\\Frame 37 edit 2.png")); // NOI18N
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
+
+        jButton2.setBackground(new java.awt.Color(51, 51, 255));
+        jButton2.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Kembali");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, 20));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/dashboard edit.png"))); // NOI18N
         jLabel10.setText("jLabel10");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 450, 340));
-
-        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\AMELIA\\KULIAH\\Kuliah SMT 4\\PROJECT DESKTOP\\foto figma\\Frame 37 edit 2.png")); // NOI18N
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose(); //close the form
+        Home h = new Home();
+        h.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -169,6 +179,7 @@ public class voting extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
