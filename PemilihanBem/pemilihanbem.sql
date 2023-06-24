@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2023 at 05:47 PM
+-- Generation Time: Jun 24, 2023 at 06:58 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -45,6 +45,13 @@ CREATE TABLE `jurusan` (
   `nama_jurusan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `jurusan`
+--
+
+INSERT INTO `jurusan` (`id_jurusan`, `nama_jurusan`) VALUES
+(1, 'TRPL');
+
 -- --------------------------------------------------------
 
 --
@@ -54,8 +61,11 @@ CREATE TABLE `jurusan` (
 CREATE TABLE `kandidat` (
   `id_kandidat` int(11) NOT NULL,
   `nim` int(11) NOT NULL,
+  `nama_jurusan` varchar(255) NOT NULL,
   `id_jurusan` int(11) NOT NULL,
-  `nama_mhs` varchar(255) NOT NULL
+  `nama_mhs` varchar(255) NOT NULL,
+  `visi` text NOT NULL,
+  `misi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -69,6 +79,13 @@ CREATE TABLE `mahasiswa` (
   `id_jurusan` int(11) NOT NULL,
   `nama_mhs` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `mahasiswa`
+--
+
+INSERT INTO `mahasiswa` (`nim`, `id_jurusan`, `nama_mhs`) VALUES
+(1, 1, 'Rizki Ananda');
 
 -- --------------------------------------------------------
 
@@ -85,20 +102,31 @@ CREATE TABLE `pemilih` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pengaduan`
+--
+
+CREATE TABLE `pengaduan` (
+  `pengaduan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pengaduan`
+--
+
+INSERT INTO `pengaduan` (`pengaduan`) VALUES
+('tes');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
+  `id_user` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`username`, `password`) VALUES
-('admin', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -123,8 +151,8 @@ ALTER TABLE `jurusan`
 --
 ALTER TABLE `kandidat`
   ADD PRIMARY KEY (`id_kandidat`),
-  ADD KEY `nim` (`nim`),
-  ADD KEY `id_jurusan` (`id_jurusan`);
+  ADD KEY `id_jurusan` (`id_jurusan`),
+  ADD KEY `nim` (`nim`);
 
 --
 -- Indexes for table `mahasiswa`
@@ -141,6 +169,12 @@ ALTER TABLE `pemilih`
   ADD KEY `id_jurusan` (`id_jurusan`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_user`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -154,13 +188,19 @@ ALTER TABLE `bpu`
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
-  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `kandidat`
 --
 ALTER TABLE `kandidat`
-  MODIFY `id_kandidat` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kandidat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
